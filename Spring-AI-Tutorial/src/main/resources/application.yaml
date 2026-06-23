@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Spring-AI-Tutorial
+
+  ai:
+    model:
+      chat: openai
+      embedding: none
+
+    openai:
+      api-key: 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
+      base-url: https://integrate.api.nvidia.com/v1
+      chat:
+        model: minimaxai/minimax-m3
+        max-tokens: 2048
+## If you want to use NVIDIA's OpenAI-compatible endpoint instead, use the
+## spring-ai-starter-model-openai dependency and configure spring.ai.openai.

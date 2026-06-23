@@ -2,6 +2,7 @@ spring:
   application:
     name: Spring-AI-Tutorial
 
+## Read the docs https://docs.spring.io/spring-ai/reference/api/chat/nvidia-chat.html
   ai:
     model:
       chat: openai

@@ -6,4 +6,12 @@ public record PathDTO(
         double distance,
         double timeToReach
 ) {
+    @Override
+    public String toString() {
+        return "PathDTO{" +
+                "pathNumber=" + pathNumber +
+                ", distance=" + distance +
+                ", timeToReach=" + timeToReach +
+                '}';
+    }
 }

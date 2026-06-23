@@ -33,7 +33,7 @@ public class AIServiceTest {
 
     @Test
     void getShortestPath(){
-        System.out.println(service.getShortestPath(pathDTOList));
+        System.out.println(service.getShortestPath(pathDTOList).toString());
     }
 
 

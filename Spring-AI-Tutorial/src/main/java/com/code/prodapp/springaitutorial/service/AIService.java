@@ -42,7 +42,7 @@ public class AIService {
 
     }
 
-    public String getShortestPath(List<PathDTO> pathDTO){
+    public PathDTO getShortestPath(List<PathDTO> pathDTO){
 
         String systemPrompt = """
                 You are a path prediction model, which you will give the shortest path.
@@ -58,9 +58,9 @@ public class AIService {
         var response = chatClient.prompt()
                 .user(renderedText)
                 .call()
-                .chatClientResponse();
+                .entity(PathDTO.class);
 
-        return response.chatResponse().getResult().getOutput().getText();
+        return new PathDTO(response.pathNumber(),response.distance(),response.timeToReach());
 
 
 
